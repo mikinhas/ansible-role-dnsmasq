@@ -28,7 +28,7 @@ None.
 ```yaml
 - hosts: servers
   roles:
-    - role: ansible-role-dnsmasq
+    - role: mikinhas.dnsmasq
       vars:
         dnsmasq_interface: eth0
         dnsmasq_domain: home.local

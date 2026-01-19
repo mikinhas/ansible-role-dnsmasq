@@ -1,5 +1,7 @@
 ---
 galaxy_info:
+  namespace: mikinhas
+  role_name: dnsmasq
   author: Michael MACHADO
   description: Install and configure dnsmasq as a DNS and DHCP server
   license: MIT
