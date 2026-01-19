@@ -3,4 +3,4 @@
   ansible.builtin.service:
     name: dnsmasq
     state: restarted
-    enabled: yes
+    enabled: true

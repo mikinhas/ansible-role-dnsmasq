@@ -1,12 +1,12 @@
 ---
 - name: Install dnsmasq
-  apt:
+  ansible.builtin.apt:
     name: dnsmasq
     state: present
-    update_cache: yes
+    update_cache: true
 
 - name: Configure dnsmasq
-  template:
+  ansible.builtin.template:
     src: dnsmasq.conf.j2
     dest: /etc/dnsmasq.d/custom.conf
     owner: root
