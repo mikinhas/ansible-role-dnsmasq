@@ -1,16 +1,16 @@
-# Interface à écouter
+# Interface to listen on
 interface={{ dnsmasq_interface }}
 bind-interfaces
 
-# Domaine local
+# Local domain
 domain={{ dnsmasq_domain }}
 
-# DHCP : plage et durée de bail
+# DHCP: range and lease duration
 dhcp-range={{ dhcp_range_start }},{{ dhcp_range_end }},{{ dhcp_lease_time }}
 dhcp-option=3,{{ dhcp_option_router }}
 dhcp-option=6,{{ dhcp_option_dns }}
 
-# DNS amont
+# Upstream DNS servers
 {% for server in upstream_dns %}
 server={{ server }}
 {% endfor %}
