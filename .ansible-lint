@@ -1,0 +1,8 @@
+---
+exclude_paths:
+  - .github/
+
+project_dir: .
+
+mock_roles:
+  - ansible-role-dnsmasq
