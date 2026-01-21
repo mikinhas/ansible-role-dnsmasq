@@ -1,11 +1,13 @@
 ---
 - name: Install dnsmasq
+  become: true
   ansible.builtin.apt:
     name: dnsmasq
     state: present
     update_cache: true
 
 - name: Configure dnsmasq
+  become: true
   ansible.builtin.template:
     src: dnsmasq.conf.j2
     dest: /etc/dnsmasq.d/custom.conf
